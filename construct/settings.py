@@ -1,4 +1,5 @@
 from pathlib import Path
+from django.contrib.messages import constants
 import os
 
 
@@ -127,3 +128,12 @@ AUTH_USER_MODEL = 'usuarios.Users'
 
 #Role permissions
 ROLEPERMISSIONS_MODULE = 'construct.roles'
+
+
+MESSAGE_TAGS = {
+    constants.DEBUG: 'alert-primary',
+    constants.ERROR: 'alert-danger',
+    constants.SUCCESS: 'alert-success',
+    constants.INFO: 'alert-info',
+    constants.WARNING: 'alert-warning'
+}
